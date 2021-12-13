@@ -16,10 +16,12 @@
 ## Comandi utili
      strings                            /mostra funzioni
      file nome                          /mostra (Ex:intel 80386) l'architettura del programma
-     checksec info studia
-     pwn checksec                       /stessa cosa con checksec
+     
      
 ### Checksec
+     checksec info studia
+     pwn checksec                       /stessa cosa con checksec
+     -Outputs di Checksec
       1- RELRO                          /Relocation Read-Only la tabella GOT non puo essere editata. Vedi es 1_GOT (exit call overlapped)
       2- CANARY                         /Controllo sul return della funzione chiamata che si accerta che riporti alla funzione precedente
       3- NX                             /Non-Executable La stack non è eseguibile
