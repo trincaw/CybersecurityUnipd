@@ -1,5 +1,5 @@
 <h2> Cybersecurity Tools</h2>
-Corso di Cybersecurity presso l'università di Padova
+Toolkit di supporto per il corso di Cybersecurity presso l'università di Padova
 
 
 ## GDB
