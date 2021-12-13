@@ -18,6 +18,14 @@
      file nome                          /mostra (Ex:intel 80386) l'architettura del programma
      checksec info studia
      pwn checksec                       /stessa cosa con checksec
+     
+### Checksec
+      1- RELRO                          /Relocation Read-Only la tabella GOT non puo essere editata. Vedi es 1_GOT (exit call overlapped)
+      2- CANARY                         /Controllo sul return della funzione chiamata che si accerta che riporti alla funzione precedente
+      3- NX                             /Non-Executable La stack non è eseguibile
+      4- PIE                            /Position Independent Executable Indirizzi shiftati di uno stesso offset comune
+      Fonti: https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/ e @Stecca
+     
 ## Info utili
 
      puntatore in 32bit è grande 4bit
@@ -36,7 +44,7 @@
      v                                  /entra in modalità visual
 ## Pwn tools
 
-     pwn pytohn
+     pwn python
      asm(shellcraft.sh())               /crea una shell 
 
  
