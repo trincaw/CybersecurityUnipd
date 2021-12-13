@@ -20,7 +20,7 @@
      
 ### Checksec
      checksec info studia
-     pwn checksec                       /stessa cosa con checksec
+     pwn checksec                       /simile a file ma da piu info
      -Outputs di Checksec
       1- RELRO                          /Relocation Read-Only la tabella GOT non puo essere editata. Vedi es 1_GOT (exit call overlapped)
       2- CANARY                         /Controllo sul return della funzione chiamata che si accerta che riporti alla funzione precedente
