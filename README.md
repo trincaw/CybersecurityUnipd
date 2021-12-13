@@ -43,7 +43,6 @@
      pdg                                /mostra la funzione in cui sei decompilata con ghidra SERVE rdghidra
      v                                  /entra in modalità visual
 ## Pwn tools
-
      pwn python
      asm(shellcraft.sh())               /crea una shell 
 
