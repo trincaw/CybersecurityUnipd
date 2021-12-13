@@ -36,7 +36,7 @@
      v                                  /entra in modalità visual
 ## Pwn tools
 
-     pwn pytohn
+     pwn Python
      asm(shellcraft.sh())               /crea una shell 
 
  
