@@ -15,7 +15,7 @@
      c                                  /contiuna dopo br
 ## Comandi utili
      strings                            /mostra funzioni
-     file nome                          /mostra (Ex:intel 80386) che indica anche l architettura del programma
+     file nome                          /mostra (Ex:intel 80386) l'architettura del programma
      checksec info studia
      pwn checksec                       /stessa cosa con checksec
 ## Info utili
