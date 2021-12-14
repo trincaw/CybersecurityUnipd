@@ -18,18 +18,18 @@ Toolkit di supporto per il corso di Cybersecurity presso l'università di Padova
      c                                  /contiuna dopo br
 ## Comandi utili
      strings                            /mostra funzioni
-     file nome                          /mostra (Ex:intel 80386) l'architettura del programma
+     file nome                          /mostra architettura (Ex:intel 80386) 
      
      
 ### Checksec
      checksec info studia
-     pwn checksec                       /simile a file ma da piu info
+     pwn checksec                       /simile a comando file ma da piu info
      -Outputs di Checksec
       1- RELRO                          /Relocation Read-Only la tabella GOT non puo essere editata. Vedi es 1_GOT (exit call overlapped)
       2- CANARY                         /Controllo sul return della funzione chiamata che si accerta che riporti alla funzione precedente
       3- NX                             /Non-Executable La stack non è eseguibile
       4- PIE                            /Position Independent Executable Indirizzi shiftati di uno stesso offset comune
-      Fonti: https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/ e @Stecca
+     Fonti: https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/ e @Stecca
      
 ## Info utili
 
