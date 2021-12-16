@@ -26,7 +26,6 @@
      
      
 ### Checksec
-     checksec info studia
      pwn checksec                       /simile a comando file ma da piu info
      -Outputs di Checksec
       1- RELRO                          /Relocation Read-Only la tabella GOT non puo essere editata. Vedi es 1_GOT (exit call overlapped)
