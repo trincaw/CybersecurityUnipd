@@ -17,6 +17,7 @@
      disassemble bash                   /mostra assembly della funzione
      c                                  /contiuna dopo br
      x/200bx $esp                       /mostra la stack, se non c'è esp usa rsp
+     r < a                              /da come input il file a (da usare con cyclic)
      
 ## Comandi utili
      strings                            /mostra funzioni
