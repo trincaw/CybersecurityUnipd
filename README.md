@@ -54,6 +54,14 @@
      p.interactive()                    /permette di interagire con il terminale
      asm(shellcraft.sh())               /crea una shell 
      offset = cyclic_find("kaaa")       /ritorna la distanza della stringa kaaa sul cyclic
+     c.binary.got["exit"]               /ottiene l'indirizzo della funzione exit in got
+     c.binary.functions["win"].address  /ottiene l'indirizzo di un metodo all'interno del
+
+     ## ROP
+     dst = context.binary.get_section_by_name(".data").header.     /ottiene l'indirizzo di un area di memoria
+     r(r14=dst, r15=b"flag.txt")                                   /scrive su i registri dati
+     r.call("system", [e.symbols["parameters"]])                   /richiama una funzione con parametri custom tramite ROP (aggiunge alla chain da richiamare)
+     p.send(b"A" * 8 * 5 + r.chain())                              /invia la chain ROP creata
      
 ## Ida
 
