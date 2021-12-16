@@ -34,12 +34,6 @@
       3- NX                             /Non-Executable La stack non è eseguibile
       4- PIE                            /Position Independent Executable Indirizzi shiftati di uno stesso offset comune
      Fonti: https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/ e @Stecca
-     
-## Info utili
-
-     puntatore in 32bit è grande 4bit
-     puntatore in 64bit è grande 8bit
-
  
 ## Radare
      r2 file                            /apre file
@@ -60,10 +54,14 @@
      p.interactive()                    /permette di interagire con il terminale
      asm(shellcraft.sh())               /crea una shell 
      offset = cyclic_find("kaaa")       /ritorna la distanza della stringa kaaa sul cyclic
-
- 
-## Ghidra
- 
+     
 ## Ida
 
-      Hex 90 = nop
+     90 = nop                           /90 in esadecimale corrisponde a un istruzione assembly nulla: nop
+ 
+## Ghidra
+     
+## Info utili
+
+     puntatore in 32bit è grande 4bit
+     puntatore in 64bit è grande 8bit
