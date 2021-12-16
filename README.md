@@ -1,5 +1,5 @@
-<h2> Cybersecurity Tools</h2>
-Toolkit di supporto per il corso di Cybersecurity presso l'università di Padova
+# Cybersecurity Tools
+### Toolkit di supporto per il corso di Cybersecurity presso l'università di Padova
 
 
 ## GDB
@@ -16,9 +16,12 @@ Toolkit di supporto per il corso di Cybersecurity presso l'università di Padova
      x/s (char *) flag_buf              /stampa una variabile come stringa
      disassemble bash                   /mostra assembly della funzione
      c                                  /contiuna dopo br
+     x/200bx $esp                       /mostra la stack, se non c'è esp usa rsp
+     
 ## Comandi utili
      strings                            /mostra funzioni
      file nome                          /mostra architettura (Ex:intel 80386) 
+     pwn cyclic 100 > a                 /crea un pattern lungo 100 dentro al file a
      
      
 ### Checksec
@@ -48,8 +51,9 @@ Toolkit di supporto per il corso di Cybersecurity presso l'università di Padova
      pdg                                /mostra la funzione in cui sei decompilata con ghidra SERVE rdghidra
      v                                  /entra in modalità visual
 ## Pwn tools
-     pwn python
+     from pwn import *
      asm(shellcraft.sh())               /crea una shell 
+     offset = cyclic_find("kaaa")       /ritorna la distanza della stringa kaaa sul cyclic
 
  
 ## Ghidra
