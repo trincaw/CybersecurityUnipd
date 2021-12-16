@@ -57,7 +57,7 @@
      c.binary.got["exit"]               /ottiene l'indirizzo della funzione exit in got
      c.binary.functions["win"].address  /ottiene l'indirizzo di un metodo all'interno del
 
-     ## ROP
+     <h1> ROP </h1>
      dst = context.binary.get_section_by_name(".data").header.     /ottiene l'indirizzo di un area di memoria
      r(r14=dst, r15=b"flag.txt")                                   /scrive su i registri dati
      r.call("system", [e.symbols["parameters"]])                   /richiama una funzione con parametri custom tramite ROP (aggiunge alla chain da richiamare)
