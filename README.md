@@ -18,6 +18,7 @@
      c                                  /contiuna dopo br
      x/200bx $esp                       /mostra la stack, se non c'è esp usa rsp
      r < a                              /da come input il file a (da usare con cyclic)
+     r < $(python -c "print('A'*50)")   /da come input il risultato dello script
      
 ## Comandi utili
      strings                            /mostra funzioni
