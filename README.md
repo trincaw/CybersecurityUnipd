@@ -1,5 +1,5 @@
 # Cybersecurity Tools
-### Toolkit di supporto per il corso di Cybersecurity presso l'università di Padova
+### Toolkit di supporto per il corso di Cybersecurity presso l'Università degli Studi Padova
 
 
 ## GDB
@@ -50,8 +50,13 @@
      pdc                                /mostra la funzione in cui sei decompilata con radare
      pdg                                /mostra la funzione in cui sei decompilata con ghidra SERVE rdghidra
      v                                  /entra in modalità visual
-## Pwn tools
-     from pwn import *
+
+## Pwntools
+     from pwn import *                  /importa pwntools in uno script
+     p.sendline(_msg_)                  /scrive una stringa nel terminale
+     p.sendlineafter('_str_', _msg_)    /scrive una stringa nel terminale solo dopo aver letto una certa stringa
+     p.recvall()                        /salva le stampe del terminale (da assegnare ad una variabile oppure printare)
+     p.interactive()                    /permette di interagire con il terminale
      asm(shellcraft.sh())               /crea una shell 
      offset = cyclic_find("kaaa")       /ritorna la distanza della stringa kaaa sul cyclic
 
