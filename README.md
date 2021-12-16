@@ -1,5 +1,5 @@
-<h2> Cybersecurity Tools</h2>
-Toolkit di supporto per il corso di Cybersecurity presso l'Università degli Studi Padova
+# Cybersecurity Tools
+### Toolkit di supporto per il corso di Cybersecurity presso l'Università degli Studi Padova
 
 
 ## GDB
@@ -16,9 +16,12 @@ Toolkit di supporto per il corso di Cybersecurity presso l'Università degli Stu
      x/s (char *) flag_buf              /stampa una variabile come stringa
      disassemble bash                   /mostra assembly della funzione
      c                                  /contiuna dopo br
+     x/200bx $esp                       /mostra la stack, se non c'è esp usa rsp
+     
 ## Comandi utili
      strings                            /mostra funzioni
      file nome                          /mostra architettura (Ex:intel 80386) 
+     pwn cyclic 100 > a                 /crea un pattern lungo 100 dentro al file a
      
      
 ### Checksec
@@ -47,6 +50,7 @@ Toolkit di supporto per il corso di Cybersecurity presso l'Università degli Stu
      pdc                                /mostra la funzione in cui sei decompilata con radare
      pdg                                /mostra la funzione in cui sei decompilata con ghidra SERVE rdghidra
      v                                  /entra in modalità visual
+
 ## Pwntools
      from pwn import *                  /importa pwntools in uno script
      p.sendline(_msg_)                  /scrive una stringa nel terminale
@@ -54,6 +58,7 @@ Toolkit di supporto per il corso di Cybersecurity presso l'Università degli Stu
      p.recvall()                        /salva le stampe del terminale (da assegnare ad una variabile oppure printare)
      p.interactive()                    /permette di interagire con il terminale
      asm(shellcraft.sh())               /crea una shell 
+     offset = cyclic_find("kaaa")       /ritorna la distanza della stringa kaaa sul cyclic
 
  
 ## Ghidra
