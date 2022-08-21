@@ -70,5 +70,5 @@
      
 ## Info utili
 
-     puntatore in 32bit è grande 4bit
-     puntatore in 64bit è grande 8bit
+     puntatore in 32bit è grande 4byte
+     puntatore in 64bit è grande 8byte
