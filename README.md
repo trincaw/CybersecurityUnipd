@@ -4,7 +4,7 @@
 
 ## GDB
      gdb nomefile                       /per aprire il file
-     run                                /per runnare il programma
+     run                                /per avviare il programma
      bt                                 /backtrace mostra le chiamate fatte finora dal programma
      br *0xBD o br main                 /mette breakpoint su l indirizzo HEX passato
      jump printflag                     /salta alla funzione richiesta need br and run
@@ -33,7 +33,7 @@
       2- CANARY                         /Controllo sul return della funzione chiamata che si accerta che riporti alla funzione precedente
       3- NX                             /Non-Executable La stack non è eseguibile
       4- PIE                            /Position Independent Executable Indirizzi shiftati di uno stesso offset comune
-     Fonti: https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/ e @Stecca
+     Fonti:                             https://blog.siphos.be/2011/07/high-level-explanation-on-some-binary-executable-security/
  
 ## Radare
      r2 file                            /apre file
@@ -47,15 +47,15 @@
      v                                  /entra in modalità visual
 
 ## Pwntools
-     from pwn import *                  /importa pwntools in uno script
-     p.sendline(_msg_)                  /scrive una stringa nel terminale
-     p.sendlineafter('_str_', _msg_)    /scrive una stringa nel terminale solo dopo aver letto una certa stringa
-     p.recvall()                        /salva le stampe del terminale (da assegnare ad una variabile oppure printare)
-     p.interactive()                    /permette di interagire con il terminale
-     asm(shellcraft.sh())               /crea una shell 
-     offset = cyclic_find("kaaa")       /ritorna la distanza della stringa kaaa sul cyclic
-     c.binary.got["exit"]               /ottiene l'indirizzo della funzione exit in got
-     c.binary.functions["win"].address  /ottiene l'indirizzo di un metodo all'interno del
+     from pwn import *                                             /importa pwntools in uno script
+     p.sendline(_msg_)                                             /scrive una stringa nel terminale
+     p.sendlineafter('_str_', _msg_)                               /scrive una stringa nel terminale solo dopo aver letto una certa stringa
+     p.recvall()                                                   /salva le stampe del terminale (da assegnare ad una variabile oppure printare)
+     p.interactive()                                               /permette di interagire con il terminale
+     asm(shellcraft.sh())                                          /crea una shell 
+     offset = cyclic_find("kaaa")                                  /ritorna la distanza della stringa kaaa sul cyclic
+     c.binary.got["exit"]                                          /ottiene l'indirizzo della funzione exit in got
+     c.binary.functions["win"].address                             /ottiene l'indirizzo di un metodo all'interno del
      -ROP 
      dst = context.binary.get_section_by_name(".data").header.     /ottiene l'indirizzo di un area di memoria
      r(r14=dst, r15=b"flag.txt")                                   /scrive su i registri dati
@@ -66,9 +66,3 @@
 
      90 = nop                           /90 in esadecimale corrisponde a un istruzione assembly nulla: nop
  
-## Ghidra
-     
-## Info utili
-
-     puntatore in 32bit è grande 4byte
-     puntatore in 64bit è grande 8byte
